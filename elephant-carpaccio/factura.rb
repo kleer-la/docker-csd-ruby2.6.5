@@ -1,4 +1,4 @@
-require_relative "./models/index.rb"
+require_relative "./models/invoice.model.rb"
 unit = ARGV[0].to_i;
 cost =  ARGV[1].to_f;
 invoice = Invoice.new();
