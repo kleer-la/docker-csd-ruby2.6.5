@@ -19,4 +19,10 @@ class Tax
     def self.get_taxes(total, state = "NV")
         return total * (1 + @@rates[state.to_sym][:rate]);
     end
+
+    def self.exists_state?(state)
+        if(@@rates[state.to_sym] == nil)
+            raise "El Estado ingresado no existe, debes seleccionar uno de estos estados: UT, NV, TX, AL, CA";
+        end
+    end
 end
