@@ -1,6 +1,5 @@
 class Invoice
-    def get_total(unit, cost)
-        puts "args is #{unit} #{cost}"
+    def self.get_total(unit, cost)
         return unit * cost;
     end
 end
